@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-primary: #555f4d;
+  --color-secondary: #765753;
+  --color-tertiary: #665b44;
+
+  /* Surfaces */
+  --color-background: #fbf9f0;
+  --color-surface: #fbf9f0;
+  --color-surface-bright: #fbf9f0;
+  --color-surface-dim: #dcdad1;
+  --color-surface-container: #f0eee5;
+  --color-surface-container-low: #f6f4eb;
+  --color-surface-container-high: #eae8df;
+  --color-surface-container-highest: #e4e3da;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-variant: #e4e3da;
+  --color-surface-tint: #58614f;
+
+  /* Inverse */
+  --color-inverse-surface: #30312b;
+  --color-inverse-on-surface: #f3f1e8;
+  --color-inverse-primary: #c0cab4;
+
+  /* On-colors */
+  --color-on-surface: #1b1c17;
+  --color-on-surface-variant: #454841;
+  --color-on-background: #1b1c17;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-on-tertiary: #ffffff;
+
+  /* Containers */
+  --color-primary-container: #6e7865;
+  --color-primary-fixed: #dce6cf;
+  --color-primary-fixed-dim: #c0cab4;
+  --color-secondary-container: #fdd3cf;
+  --color-secondary-fixed: #ffdad6;
+  --color-secondary-fixed-dim: #e5bdb9;
+  --color-tertiary-container: #80735b;
+  --color-tertiary-fixed: #f1e0c3;
+  --color-tertiary-fixed-dim: #d5c5a9;
+
+  /* On-containers */
+  --color-on-primary-container: #f8ffed;
+  --color-on-primary-fixed: #161e10;
+  --color-on-primary-fixed-variant: #404a39;
+  --color-on-secondary-container: #795956;
+  --color-on-secondary-fixed: #2c1513;
+  --color-on-secondary-fixed-variant: #5c403d;
+  --color-on-tertiary-container: #fffbff;
+  --color-on-tertiary-fixed: #231a08;
+  --color-on-tertiary-fixed-variant: #504530;
+
+  /* Error */
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  /* Outline */
+  --color-outline: #757870;
+  --color-outline-variant: #c5c7be;
+
+  /* Fonts */
+  --font-headline: var(--font-noto-serif), serif;
+  --font-body: var(--font-manrope), sans-serif;
+  --font-label: var(--font-manrope), sans-serif;
+
+  /* Border radius */
+  --radius: 0.125rem;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom utilities */
+@utility glass-nav {
+  background: rgba(251, 249, 240, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+@utility editorial-shadow {
+  box-shadow: 0 20px 40px rgba(27, 28, 23, 0.05);
+}
+
+@utility primary-gradient {
+  background: linear-gradient(135deg, #555f4d 0%, #6e7865 100%);
+}
