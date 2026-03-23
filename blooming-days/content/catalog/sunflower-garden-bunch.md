@@ -3,7 +3,7 @@ slug: sunflower-garden-bunch
 name: "Sunflower Garden Bunch"
 price: "₱380–₱650"
 description: "Bright, cheerful sunflowers paired with seasonal greenery and wildflowers."
-image: ""
+image: "https://images.unsplash.com/photo-1543409777-30250849aa3e?w=800&q=80"
 featured: true
 category: "Bouquets"
 ---

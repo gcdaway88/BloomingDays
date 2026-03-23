@@ -3,7 +3,7 @@ slug: lavender-dreams
 name: "Lavender Dreams"
 price: "₱500–₱900"
 description: "A soft, romantic arrangement of lavender, white ranunculus, and eucalyptus."
-image: ""
+image: "https://images.unsplash.com/photo-1529346760098-83265eeaa1f4?w=800&q=80"
 featured: true
 category: "Bouquets"
 ---

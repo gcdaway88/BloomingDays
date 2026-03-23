@@ -3,7 +3,7 @@ slug: seasonal-wildflowers
 name: "Seasonal Wildflowers"
 price: "₱320–₱550"
 description: "A carefree mix of whatever's freshest and most beautiful this season."
-image: ""
+image: "https://images.unsplash.com/photo-1751891480287-0b662b3b2aa0?w=800&q=80"
 featured: false
 category: "Bouquets"
 ---

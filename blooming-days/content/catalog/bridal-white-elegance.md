@@ -3,7 +3,7 @@ slug: bridal-white-elegance
 name: "Bridal White Elegance"
 price: "₱1,200–₱3,500"
 description: "A lush, all-white arrangement of peonies, garden roses, and trailing greenery."
-image: ""
+image: "https://images.unsplash.com/photo-1494336877155-7fb9c6984f0a?w=800&q=80"
 featured: false
 category: "Wedding"
 ---

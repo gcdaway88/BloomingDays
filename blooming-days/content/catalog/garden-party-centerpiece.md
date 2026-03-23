@@ -3,7 +3,7 @@ slug: garden-party-centerpiece
 name: "Garden Party Centerpiece"
 price: "₱850–₱1,800"
 description: "A lush table centerpiece bursting with seasonal blooms and garden foliage."
-image: ""
+image: "https://images.unsplash.com/photo-1758810741900-0b2250ded8b3?w=800&q=80"
 featured: false
 category: "Centerpieces"
 ---

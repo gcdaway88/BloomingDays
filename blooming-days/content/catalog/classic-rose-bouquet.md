@@ -3,7 +3,7 @@ slug: classic-rose-bouquet
 name: "Classic Rose Bouquet"
 price: "₱450–₱800"
 description: "A timeless arrangement of garden roses in soft pinks and creamy whites."
-image: ""
+image: "https://images.unsplash.com/photo-1523693916903-027d144a2b7d?w=800&q=80"
 featured: true
 category: "Bouquets"
 ---
