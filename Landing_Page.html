@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#30312b",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#757870",
+              "tertiary-fixed": "#f1e0c3",
+              "surface-dim": "#dcdad1",
+              "secondary-container": "#fdd3cf",
+              "surface-container-highest": "#e4e3da",
+              "tertiary": "#665b44",
+              "on-tertiary-fixed-variant": "#504530",
+              "on-secondary-fixed-variant": "#5c403d",
+              "surface-container-high": "#eae8df",
+              "primary": "#555f4d",
+              "error": "#ba1a1a",
+              "on-background": "#1b1c17",
+              "surface-tint": "#58614f",
+              "secondary-fixed-dim": "#e5bdb9",
+              "inverse-on-surface": "#f3f1e8",
+              "surface-bright": "#fbf9f0",
+              "primary-container": "#6e7865",
+              "primary-fixed": "#dce6cf",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#c0cab4",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#404a39",
+              "on-primary-container": "#f8ffed",
+              "error-container": "#ffdad6",
+              "surface": "#fbf9f0",
+              "on-error-container": "#93000a",
+              "tertiary-fixed-dim": "#d5c5a9",
+              "secondary": "#765753",
+              "on-surface-variant": "#454841",
+              "on-primary-fixed": "#161e10",
+              "on-secondary": "#ffffff",
+              "surface-variant": "#e4e3da",
+              "on-secondary-container": "#795956",
+              "secondary-fixed": "#ffdad6",
+              "outline-variant": "#c5c7be",
+              "on-surface": "#1b1c17",
+              "background": "#fbf9f0",
+              "surface-container-low": "#f6f4eb",
+              "inverse-primary": "#c0cab4",
+              "on-tertiary-container": "#fffbff",
+              "on-tertiary-fixed": "#231a08",
+              "surface-container": "#f0eee5",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#80735b",
+              "on-secondary-fixed": "#2c1513"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .editorial-shadow {
+        box-shadow: 0 20px 40px rgba(27, 28, 23, 0.05);
+      }
+      .glass-nav {
+        background: rgba(251, 249, 240, 0.8);
+        backdrop-filter: blur(12px);
+      }
+      .primary-gradient {
+        background: linear-gradient(135deg, #555f4d 0%, #6e7865 100%);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 glass-nav border-b border-outline-variant/15 px-6 py-4 md:px-20 lg:px-40 flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-3 text-on-surface">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+</svg>
+</div>
+<h2 class="font-headline text-lg font-bold tracking-tight" style="">The Herbarium Archive</h2>
+</div>
+<div class="flex flex-1 justify-end gap-10 items-center">
+<nav class="hidden md:flex items-center gap-8"><a class="text-on-surface text-sm font-medium hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="text-on-surface text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-on-surface text-sm font-medium hover:text-primary transition-colors" href="{{DATA:SCREEN:herbarium_shop_page}}">Shop</a></nav>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-xl h-10 px-5 primary-gradient text-on-primary text-sm font-bold tracking-wide editorial-shadow" style="">
+                        Contact Us
+                    </button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<div class="@container bg-surface">
+<div class="flex flex-col gap-12 px-6 py-16 md:px-20 lg:px-40 @[864px]:flex-row @[864px]:items-center">
+<!-- Hero Image with Editorial Offset -->
+<div class="w-full @[864px]:w-1/2 relative">
+<div class="aspect-[4/5] bg-surface-container-high rounded-lg overflow-hidden editorial-shadow relative z-10 translate-x-4">
+<img alt="Artistic pressed flower memento" class="w-full h-full object-cover" data-alt="Close up of a pressed flower in a wooden frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrZv7o8ndWV6h5U-KUZGTbbUc5ZjVeRRfThMIjQN1hymGj6IRLnKl7HRZjwbIs7jIYdpNuFfwf5VZWG8mxLgcBU7Z0EuXCyGqhzBcfv435kE_RlGKTF__1pykbxiZnjGh_b8yN58MH6r6-iIow8d3PNrj2IJmS_i9iLb9Jp6tf_ge6h8m88RQx9wH6NuOQPyRCZGt53oznvjnO5Bm-ynyOy47U8JNQ907NhHwbduFWGXR_Mcrb4V6Na7u64HtOcRnUHkr3YUjftlk" style=""/>
+</div>
+<div class="absolute inset-0 bg-tertiary-fixed/30 rounded-lg -translate-x-4 translate-y-4 -z-0"></div>
+</div>
+<!-- Hero Text Content -->
+<div class="flex flex-col gap-8 @[864px]:w-1/2">
+<div class="flex flex-col gap-4">
+<span class="text-primary font-label text-xs font-bold tracking-[0.15em] uppercase" style="">Bespoke Botanical Art</span>
+<h1 class="text-on-surface font-headline text-5xl font-black leading-[1.1] tracking-[-0.03em] @[1280px]:text-6xl" style="">
+                                    Preserving Nature's Fleeting Moments
+                                </h1>
+<p class="text-on-surface-variant text-lg font-normal leading-relaxed max-w-lg" style="">
+                                    Turning your most cherished memories into timeless floral mementos. We specialize in archival-grade botanical preservation that captures the soul of every petal.
+                                </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 primary-gradient text-on-primary text-base font-bold tracking-wide" style="">
+                                    Book a Consultation
+                                </button>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 border border-outline-variant/30 text-on-surface text-base font-bold" style="">
+                                    View Gallery
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Gallery Section -->
+<section class="bg-surface-container-low py-20 px-6 md:px-20 lg:px-40">
+<div class="flex flex-col gap-2 mb-12">
+<span class="text-primary font-label text-xs font-bold tracking-[0.15em] uppercase" style="">The Collection</span>
+<h2 class="text-on-surface font-headline text-4xl font-bold tracking-tight" style="">Our Preservation Gallery</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Framed Blossoms -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 editorial-shadow relative">
+<img alt="Framed pressed flowers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Vintage style framed botanical art on white wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGIqkNcFvTSQ7IfYR6iJSMKZvKEEQpDT-JKbMY-AV98ZSA6JZoMd3x8WQP4uzYgru2XqG7T8qKyuUe9ZhZTUeZgm6hgTqRgSRjVW_T5lmfjLV8yy7ZBRAayq6csAivlmZc7bMeRPkDf1W28N_ryFTxURVlvX58qly9ZEG6TRf1BNBNE-uAgqNCAfzaU5ADzgv5b_7xcx2Ujg8kfOiZ_g9yqcspCQ0JuwqLsNLFVbZOq1dFisDt0HNFdImXZVoeUJk7C-H3cpnPiY8" style=""/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+<span class="text-white text-sm font-bold flex items-center gap-2" style="">View Series <span class="material-symbols-outlined text-sm" style="">arrow_forward</span></span>
+</div>
+</div>
+<h3 class="text-on-surface font-headline text-xl font-bold mb-1" style="">Framed Blossoms</h3>
+<p class="text-on-surface-variant text-sm" style="">Hand-pressed on archival parchment.</p>
+</div>
+<!-- Resin Spheres -->
+<div class="group cursor-pointer translate-y-8">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 editorial-shadow relative">
+<img alt="Resin botanical keepsake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Dandelion seed head perfectly preserved in clear resin sphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJgSyhfGccCkZ_cccX5cBoZBdeM7ii-yOPyoBw1gTwdZoQoE59gt-A8Zyopc3aoL8LZSFma-73sOcBZq38OqOvU26F0dQEpc_CunWIV-I4WbWFIVo7F_p4t_Vhd2wsvk_piCgSHJiPlZ_qAoZ5tF-1SEdOBDViZtkaEqToZiXJXvXLZK7ZYy2byefhsgfYVWEgf0ZhDk449ipdHvL3Qw3_BPh4y7fjgN-nb2-RbluxHRaUBP4BptkflnYZB3QCMqXxjVqJxF6zxpI" style=""/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+<span class="text-white text-sm font-bold flex items-center gap-2" style="">Explore resin <span class="material-symbols-outlined text-sm" style="">arrow_forward</span></span>
+</div>
+</div>
+<h3 class="text-on-surface font-headline text-xl font-bold mb-1" style="">Resin Spheres</h3>
+<p class="text-on-surface-variant text-sm" style="">360-degree views of natural beauty.</p>
+</div>
+<!-- Shadow Boxes -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 editorial-shadow relative">
+<img alt="Botanical shadow box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Deep wooden shadow box with dried wedding bouquet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV8RT6zmuXe5DkYppH39Vgc7kmPQ5AqDQzDZsZuNNPZYMI4F0lvZ6zBE6x0Fyxx-M9Ksr7sM-wbwLtY15917WGRlXB6FDpTzlOGTjxWJDF1TZSU4pBQ00sBumP4ozZAIFXHQQQBRtqLCLhM3_x1-XgqjnvA6ScUNZ0qALwzQyDrPo3ieMsjyJRQUpr1fm0lQUBRSw5tVf-Z0eAd4slq3CJLfxoqaEMdBT35ue7W2cF-PqI9i6muYVunRrKUBXFZ60wS38jEf-r6IU" style=""/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+<span class="text-white text-sm font-bold flex items-center gap-2" style="">See details <span class="material-symbols-outlined text-sm" style="">arrow_forward</span></span>
+</div>
+</div>
+<h3 class="text-on-surface font-headline text-xl font-bold mb-1" style="">Shadow Boxes</h3>
+<p class="text-on-surface-variant text-sm" style="">Dimensional displays for complex bouquets.</p>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="bg-surface py-24 px-6 md:px-20 lg:px-40 @container">
+<div class="flex flex-col gap-16">
+<div class="flex flex-col gap-4 max-w-2xl">
+<span class="text-primary font-label text-xs font-bold tracking-[0.15em] uppercase" style="">Our Philosophy</span>
+<h2 class="text-on-surface font-headline text-4xl font-black leading-tight @[480px]:text-5xl" style="">
+                                Turning Memories into Timeless Botanical Art
+                            </h2>
+<p class="text-on-surface-variant text-lg font-normal leading-relaxed" style="">
+                                We believe every flower tells a story. Whether it's a wedding bouquet, a memorial rose, or a simple wildflower from a walk, our mission is to halt time and preserve that story forever.
+                            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-6 p-10 rounded-xl bg-surface-container border-b-2 border-primary/20 editorial-shadow">
+<div class="text-primary" data-icon="leaf" data-size="32px">
+<span class="material-symbols-outlined text-4xl" style="">energy_savings_leaf</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-on-surface font-headline text-2xl font-bold" style="">Nature's Heritage</h3>
+<p class="text-on-surface-variant leading-relaxed" style="">
+                                        We honor the organic beauty of every petal, ensuring their vibrant colors and forms are locked in time using traditional and modern scientific methods.
+                                    </p>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-primary font-label text-[10px] uppercase font-bold tracking-widest" style="">Ethically Sourced</span>
+</div>
+</div>
+<div class="flex flex-col gap-6 p-10 rounded-xl bg-surface-container border-b-2 border-primary/20 editorial-shadow">
+<div class="text-primary" data-icon="auto_awesome" data-size="32px">
+<span class="material-symbols-outlined text-4xl" style="">auto_awesome</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-on-surface font-headline text-2xl font-bold" style="">Artisanal Craft</h3>
+<p class="text-on-surface-variant leading-relaxed" style="">
+                                        Each piece is handcrafted using botanical minimalism principles. Our designs are intended to fit seamlessly into modern spaces as quiet, sophisticated focal points.
+                                    </p>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-primary font-label text-[10px] uppercase font-bold tracking-widest" style="">Master Craftsman</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Exhibition Section Rebranded -->
+<section class="bg-surface-container-high py-20 px-6 md:px-20 lg:px-40">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-primary font-label text-xs font-bold tracking-[0.15em] uppercase" style="">Events</span>
+<h2 class="text-on-surface font-headline text-4xl font-bold tracking-tight" style="">Upcoming Workshops &amp; Pop-ups</h2>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 group" style="">
+                            View All Events <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="">arrow_forward</span>
+</button>
+</div>
+<div class="space-y-4">
+<!-- Workshop 1 -->
+<div class="flex items-center gap-8 p-6 bg-surface rounded-xl editorial-shadow hover:bg-surface-bright transition-colors cursor-pointer group">
+<div class="hidden md:flex flex-col items-center justify-center min-w-[80px]">
+<span class="font-headline text-3xl font-black text-primary" style="">12</span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest text-on-surface-variant" style="">Oct</span>
+</div>
+<div class="flex-1">
+<h4 class="text-on-surface font-headline text-xl font-bold group-hover:text-primary transition-colors" style="">The Art of Pressed Flower Selection</h4>
+<p class="text-on-surface-variant text-sm" style="">Learn which blooms hold their color and how to prepare them for long-term framing.</p>
+</div>
+<div class="hidden lg:block text-right">
+<span class="text-on-surface-variant text-sm block" style="">10:00 AM — 2:00 PM</span>
+<span class="text-primary text-xs font-bold" style="">4 Spots Left</span>
+</div>
+<button class="size-10 rounded-full flex items-center justify-center bg-surface-container-highest text-primary" style="">
+<span class="material-symbols-outlined" style="">add</span>
+</button>
+</div>
+<!-- Workshop 2 -->
+<div class="flex items-center gap-8 p-6 bg-surface rounded-xl editorial-shadow hover:bg-surface-bright transition-colors cursor-pointer group">
+<div class="hidden md:flex flex-col items-center justify-center min-w-[80px]">
+<span class="font-headline text-3xl font-black text-primary" style="">24</span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest text-on-surface-variant" style="">Oct</span>
+</div>
+<div class="flex-1">
+<h4 class="text-on-surface font-headline text-xl font-bold group-hover:text-primary transition-colors" style="">Resin Casting Essentials</h4>
+<p class="text-on-surface-variant text-sm" style="">A deep dive into bubble-free botanical resin casting for paperweights and keepsakes.</p>
+</div>
+<div class="hidden lg:block text-right">
+<span class="text-on-surface-variant text-sm block" style="">1:00 PM — 5:00 PM</span>
+<span class="text-primary text-xs font-bold" style="">Limited Entry</span>
+</div>
+<button class="size-10 rounded-full flex items-center justify-center bg-surface-container-highest text-primary" style="">
+<span class="material-symbols-outlined" style="">add</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Footer / Contact Preview -->
+<footer class="bg-inverse-surface text-inverse-on-surface py-20 px-6 md:px-20 lg:px-40">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-outline/20 pb-16">
+<div class="col-span-1 lg:col-span-1 flex flex-col gap-6">
+<div class="flex items-center gap-3 text-white">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+</svg>
+</div>
+<h2 class="font-headline text-lg font-bold" style="">The Herbarium Archive</h2>
+</div>
+<p class="text-surface-container-highest/60 text-sm leading-relaxed" style="">
+                                Curating and preserving botanical artifacts since 2018. Based in our sun-drenched atelier.
+                            </p>
+</div>
+<div>
+<h5 class="font-label text-[10px] uppercase font-bold tracking-[0.2em] mb-6 text-primary-fixed" style="">Archive</h5>
+<ul class="space-y-4 text-sm text-surface-container-highest/80">
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Private Commissions</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Seasonal Series</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Archival Care Guide</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label text-[10px] uppercase font-bold tracking-[0.2em] mb-6 text-primary-fixed" style="">Studio</h5>
+<ul class="space-y-4 text-sm text-surface-container-highest/80">
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">About the Artist</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Workshops</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors" href="#" style="">Visit Atelier</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-label text-[10px] uppercase font-bold tracking-[0.2em] text-primary-fixed" style="">Newsletter</h5>
+<p class="text-xs text-surface-container-highest/60" style="">Receive botanical care tips and early workshop access.</p>
+<div class="relative">
+<input class="w-full bg-surface-variant/10 border-b border-outline/30 py-2 focus:outline-none focus:border-primary transition-colors text-white text-sm" placeholder="email address" type="email"/>
+<button class="absolute right-0 bottom-2 text-primary" style="">
+<span class="material-symbols-outlined" style="">trending_flat</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-surface-container-highest/40 font-bold">
+<span class="" style="">© 2024 The Herbarium Archive</span>
+<div class="flex gap-8">
+<a class="" href="#" style="">Instagram</a>
+<a class="" href="#" style="">Pinterest</a>
+<a class="" href="#" style="">Legal</a>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+</body></html>
