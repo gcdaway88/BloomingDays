@@ -19,12 +19,12 @@ export default async function HomePage() {
         <div className="flex flex-col gap-12 px-6 py-16 md:px-20 lg:px-40 @[864px]:flex-row @[864px]:items-center">
           {/* Hero Image with Editorial Offset */}
           <div className="w-full @[864px]:w-1/2 relative">
-            <div className="aspect-[4/5] bg-surface-container-high rounded-lg overflow-hidden editorial-shadow relative z-10 translate-x-4 flex items-center justify-center">
+            <div className="aspect-[4/5] bg-surface-container-high rounded-lg overflow-hidden editorial-shadow relative z-10 md:translate-x-4 flex items-center justify-center">
               <span className="material-symbols-outlined text-[8rem] text-primary/20">
                 local_florist
               </span>
             </div>
-            <div className="absolute inset-0 bg-tertiary-fixed/30 rounded-lg -translate-x-4 translate-y-4 -z-0" />
+            <div className="absolute inset-0 bg-tertiary-fixed/30 rounded-lg md:-translate-x-4 md:translate-y-4 -z-0" />
           </div>
 
           {/* Hero Text */}
@@ -33,7 +33,7 @@ export default async function HomePage() {
               <span className="text-primary font-label text-xs font-bold tracking-[0.15em] uppercase">
                 Fresh Floral Arrangements
               </span>
-              <h1 className="text-on-surface font-headline text-5xl font-black leading-[1.1] tracking-[-0.03em] lg:text-6xl">
+              <h1 className="text-on-surface font-headline text-3xl font-black leading-[1.1] tracking-[-0.03em] md:text-5xl lg:text-6xl">
                 Blooms That Speak From the Heart
               </h1>
               <p className="text-on-surface-variant text-lg font-normal leading-relaxed max-w-lg">
